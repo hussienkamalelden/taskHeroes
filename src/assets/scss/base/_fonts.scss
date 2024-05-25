@@ -1,0 +1,67 @@
+$font-m-eb:"Mulish-ExtraBold";
+$font-m-sb:"Mulish-SemiBold";
+$font-m-b:"Mulish-Bold";
+$font-m-l:"Mulish-Light";
+$font-m-r:"Mulish-Regular";
+$font-m-m:"Mulish-Medium";
+$font-o-sb:"Oswald-SemiBold";
+$font-o-r:"Oswald-Regular";
+$font-o-m:"Oswald-Medium";
+$font-p-l:"Poppins-Light";
+$font-p-r:"Poppins-Regular";
+
+@font-face {
+  font-family: $font-m-l;
+  src: url("../../fonts/mulish/static/Mulish-Light.ttf") format("trueType");
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-m-eb;
+  src: url("../../fonts/mulish/static/Mulish-ExtraBold.ttf") format("trueType");
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-m-sb;
+  src: url("../../fonts/mulish/static/Mulish-SemiBold.ttf") format("trueType");
+  font-display: swap;
+}
+@font-face {
+  font-family: $font-m-r;
+  src: url("../../fonts/mulish/static/Mulish-Regular.ttf") format("trueType");
+  font-display: swap;
+}
+@font-face {
+    font-family: $font-m-m;
+    src: url("../../fonts/mulish/static/Mulish-Medium.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-m-b;
+    src: url("../../fonts/mulish/static/Mulish-Bold.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-o-sb;
+    src: url("../../fonts/Oswald/static/Oswald-SemiBold.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-o-m;
+    src: url("../../fonts/Oswald/static/Oswald-Medium.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-o-r;
+    src: url("../../fonts/Oswald/static/Oswald-Regular.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-p-l;
+    src: url("../../fonts/Poppins/Poppins-Light.ttf") format("trueType");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: $font-p-r;
+    src: url("../../fonts/Poppins/Poppins-Regular.ttf") format("trueType");
+    font-display: swap;
+  }

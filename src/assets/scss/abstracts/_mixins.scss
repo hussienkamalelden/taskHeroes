@@ -1,0 +1,58 @@
+@import "/src/assets/scss/abstracts/variables";
+@import "/src/assets/scss/abstracts/functions";
+
+@mixin lines($numb) {
+  display: -webkit-box;
+  -webkit-line-clamp: $numb;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin btnGenerator($padding: 0,$font-size: 1rem,$color: black,$background-color: transparent,$box-shadow: none,$border-radius: 0,$font-weight: normal,$hover-color: $color,$hover-background-color: $background-color,$width: auto,$font-family: sans-serif,$border:none) {
+  padding: $padding;
+  font-size: $font-size;
+  color: $color;
+  background-color: $background-color;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  font-weight: $font-weight;
+  width: $width;
+  font-family: $font-family;
+  transition: all .2s;
+  border: $border;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-background-color;
+  }
+}
+
+@mixin positionStyles($top: none,$right: none,$bottom: none,$left: none,$position: static,$z-index:0) {
+ position: $position;
+ top: $top;
+ right: $right;
+ bottom: $bottom;
+ left: $left;
+ z-index: $z-index;
+}
+
+@mixin inputGenerator($padding: 0,$border: none,$border-radius: none,$background-color: none,$color: black,$font-family:sans-serif,$width:auto,$box-shadow:none,$placeholder-color:black,$placeholder-font-size:1rem,$placeholder-font-family:sans-serif) {
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  color: $color;
+  font-family: $font-family;
+  width: $width;
+  background-color:$background-color;
+  box-shadow: $box-shadow;
+  &::placeholder{
+    color:$placeholder-color;
+    font-size:$placeholder-font-size;
+    font-family:$placeholder-font-family; 
+  }
+  &:focus{
+    box-shadow: none;
+    border: toRem(1) solid $primary-color;
+    outline: none;
+  }
+ }
