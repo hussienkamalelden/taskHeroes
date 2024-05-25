@@ -1,0 +1,21 @@
+{
+    "allHeros": [
+        {
+            "id": 0,
+            "token": "uuid",
+            "name": "admin",
+            "email": "admin@heroes.com",
+            "role": "admin"
+        },
+        {
+            "id": 1,
+            "token": "uuid",
+            "name": "John Doe",
+            "email": "john@heroes.com",
+            "myRate": 0,
+            "totalRates": 0,
+            "heroesIRated": [],
+            "role": "Hero"
+        }
+    ]
+}
