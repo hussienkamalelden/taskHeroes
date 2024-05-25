@@ -1,10 +1,11 @@
 {
-    "allHeros": [
+    "allHeroes": [
         {
             "id": 0,
             "token": "uuid",
             "name": "admin",
             "email": "admin@heroes.com",
+            "password": "admin",
             "role": "admin"
         },
         {
@@ -12,10 +13,12 @@
             "token": "uuid",
             "name": "John Doe",
             "email": "john@heroes.com",
+            "password": "123123123",
+            "power": "HTML, CSS and Angular",
             "myRate": 0,
             "totalRates": 0,
             "heroesIRated": [],
-            "role": "Hero"
+            "role": "hero"
         }
     ]
 }

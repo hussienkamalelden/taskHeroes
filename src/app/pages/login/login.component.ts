@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Heros } from '../../services/heros/heros.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';

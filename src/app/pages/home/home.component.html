@@ -1,1 +1,22 @@
-<p>home works!</p>
+<!-- home.component.html -->
+<div class="p-fluid">
+    <div class="p-field">
+        <input type="text" pInputText placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()">
+    </div>
+    <p-table [value]="filteredHeroes" [paginator]="true" [rows]="10" sortMode="multiple">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">Hero Name <p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="power">Powers <p-sortIcon field="power"></p-sortIcon></th>
+                <th>Rate</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-hero>
+            <tr>
+                <td>{{ hero.name }}</td>
+                <td>{{ hero.power||'-' }}</td>
+                <td> <p-rating [(ngModel)]="hero.myRate" [readonly]="true" [cancel]="false" /></td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
