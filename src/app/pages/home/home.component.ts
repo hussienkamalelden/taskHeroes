@@ -3,24 +3,28 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HeroesTable } from '../../models/heroes-table';
-import { HeroeService } from '../../services/heros/heros.service';
+import { HeroesTable } from '../../shared/models/heroes-table';
+import { HeroeService } from '../../shared/services/heros/heroes.service';
 import { RatingModule } from 'primeng/rating';
+import { ButtonModule } from 'primeng/button';
+import { AddHeroDialogComponent } from './add-hero-dialog/add-hero-dialog.component';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, TableModule, InputTextModule, FormsModule, RatingModule]
+  imports: [CommonModule, TableModule, InputTextModule, FormsModule, RatingModule, ButtonModule, AddHeroDialogComponent, RouterModule]
 })
 export class HomeComponent {
-
+  visible: boolean = false;
   heroes: HeroesTable[] = [];
   filteredHeroes: HeroesTable[] = [];
   searchTerm: string = '';
 
-  constructor(private heroeService: HeroeService) { }
+  constructor(private heroeService: HeroeService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.heroeService.getHeroes().subscribe(data => {
@@ -28,7 +32,6 @@ export class HomeComponent {
       this.filteredHeroes = this.heroes;
     });
   }
-
 
   onSearch(): void {
     if (this.searchTerm) {
@@ -40,5 +43,13 @@ export class HomeComponent {
     } else {
       this.filteredHeroes = this.heroes;
     }
+  }
+
+  showDialog() {
+    this.visible = true;
+  }
+
+  receiveDialogData(event: String) {
+    this.visible = false;
   }
 }
