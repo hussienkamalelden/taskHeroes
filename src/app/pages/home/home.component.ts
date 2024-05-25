@@ -22,6 +22,7 @@ export class HomeComponent {
   heroes: HeroesTable[] = [];
   filteredHeroes: HeroesTable[] = [];
   searchTerm: string = '';
+  userRole: string = 'hero';
 
   constructor(private heroeService: HeroeService,
     private router: Router) { }
@@ -31,6 +32,13 @@ export class HomeComponent {
       this.heroes = data.filter(hero => hero.role !== "admin");
       this.filteredHeroes = this.heroes;
     });
+    const heroData = localStorage.getItem("heroData");
+    if (heroData) {
+      const parsedData = JSON.parse(heroData);
+      this.userRole = parsedData?.role;
+      console.log(this.userRole);
+
+    }
   }
 
   onSearch(): void {

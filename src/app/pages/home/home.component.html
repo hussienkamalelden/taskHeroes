@@ -1,5 +1,5 @@
 <div class="mt-3">
-    <p-button (click)="showDialog()" label="Add New Hero" />
+    <p-button *ngIf="userRole=='admin'" (click)="showDialog()" label="Add New Hero" />
     <div class="p-fluid mt-3">
         <div class="p-field">
             <input type="text" pInputText placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()">
@@ -14,7 +14,7 @@
             </ng-template>
             <ng-template pTemplate="body" let-hero>
                 <tr>
-                    <td><a [routerLink]="['/profile', hero.id]">{{ hero.name }}</a></td>
+                    <td><a [routerLink]="['/profile', hero.id]">{{ hero.username }}</a></td>
                     <td>{{ hero.power||'-' }}</td>
                     <td> <p-rating [(ngModel)]="hero.myRate" [readonly]="true" [cancel]="false" /></td>
                 </tr>

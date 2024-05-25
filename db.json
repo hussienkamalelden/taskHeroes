@@ -1,36 +1,36 @@
 {
-  "allHeroes": [
-    {
-      "id": "0",
-      "token": true,
-      "name": "admin",
-      "email": "admin@heroes.com",
-      "password": "admin0",
-      "role": "admin"
-    },
-    {
-      "id": "1",
-      "token": true,
-      "name": "John Doe",
-      "email": "john@gmail.com",
-      "password": "123123123",
-      "power": "HTML, CSS and Angular",
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "bc56",
-      "username": "tuvewav",
-      "email": "a@a.com",
-      "password": "a@a.com",
-      "power": "Nisi iure laborum Q",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    }
-  ]
+    "allHeroes": [
+        {
+            "id": "0",
+            "token": true,
+            "username": "admin",
+            "email": "admin@heroes.com",
+            "password": "admin0",
+            "role": "admin"
+        },
+        {
+            "id": "1",
+            "token": true,
+            "username": "John Doe",
+            "email": "john@gmail.com",
+            "password": "123123123",
+            "power": "HTML, CSS and Angular",
+            "myRate": 0,
+            "totalRates": 0,
+            "heroesIRated": [],
+            "role": "hero"
+        },
+        {
+            "id": "bc56",
+            "username": "tuvewav",
+            "email": "a@a.com",
+            "password": "a@a.com",
+            "power": "Nisi iure laborum Q",
+            "token": true,
+            "myRate": 0,
+            "totalRates": 0,
+            "heroesIRated": [],
+            "role": "hero"
+        }
+    ]
 }
