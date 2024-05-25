@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,21 @@ export class HeroeService {
 
   getHeroes(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
+  }
+
+  addNewHero(heroData: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl, heroData);
+  }
+
+  login(email: string, password: string): Observable<any | null> {
+    return this.http.get<any[]>(`${this.apiUrl}?email=${email}`).pipe(
+      map(users => {
+        const user = users.length > 0 ? users[0] : null;
+        if (user && user.password === password) {
+          return user;
+        }
+        return null;
+      })
+    );
   }
 }

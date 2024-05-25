@@ -12,4 +12,9 @@ export class NavbarComponent {
   userName: String = "username"
 
   constructor(private router: Router) { }
+
+  logout(): void {
+    localStorage.removeItem("heroData");
+    this.router.navigate(['/login']);
+  }
 }

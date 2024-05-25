@@ -5,6 +5,8 @@ import { Router, RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { CommonModule } from '@angular/common';
+import { HeroeService } from '../../shared/services/heros/heroes.service';
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -22,7 +24,8 @@ export class RegisterComponent {
   constructor(
     private formBuilder: FormBuilder,
     private messageService: MessageService,
-    private router: Router
+    private router: Router,
+    private heroeService: HeroeService,
   ) {
     this.registrationForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -51,17 +54,49 @@ export class RegisterComponent {
     };
   }
 
-  onSubmit() {
+  async onSubmit() {
     this.submitted = true;
     if (this.registrationForm.invalid) {
       return;
     }
-    console.log(this.registrationForm.value);
-    this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Account created successfully!' });
-    setTimeout(() => {
-      this.router.navigate(['/login']);
-    }, 2000);
 
+    this.checkHeroExists(this.registrationForm.value.email).subscribe(exists => {
+      if (!exists) {
+        this.addNewHero();
+      } else {
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'This email already exists. Please try to log in instead!' });
+      }
+    });
+  }
+
+  addNewHero(): void {
+    const heroData = {
+      ...this.registrationForm.value,
+      token: true,
+      myRate: 0,
+      totalRates: 0,
+      heroesIRated: [],
+      role: "hero"
+    }
+    delete heroData.confirmPassword;
+
+    this.heroeService.addNewHero(heroData).subscribe(
+      (response) => {
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Account created successfully!' });
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 3000);
+      },
+      (error) => {
+        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Account creation failed!' });
+      }
+    );
+  }
+
+  checkHeroExists(email: string): Observable<boolean> {
+    return this.heroeService.getHeroes().pipe(
+      map(data => !!data.find(hero => hero.email === email))
+    );
   }
 
   get f() {
