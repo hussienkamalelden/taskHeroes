@@ -26,6 +26,6 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./pages/myprofile/myprofile.component').then(m => m.MyProfileComponent),
     },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', redirectTo: '/home' },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: '**', redirectTo: '/login' },
 ];
