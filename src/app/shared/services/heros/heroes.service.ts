@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { Hero } from '../../models/hero';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,10 @@ export class HeroeService {
         return null;
       })
     );
+  }
+
+  updateHero(id: any, heroData: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${id}`, heroData);
   }
 
   getHeroProfile(id: string): Observable<any> {

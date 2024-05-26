@@ -24,7 +24,10 @@ export class ProfileComponent {
   rate: number = 0;
   totalRates: number = 0;
   loggedHero: Hero | null = null;
+  heroProfileData: Hero | null = null;
   preventRating: boolean = false;
+  ratedBefore: boolean = false;
+
 
   constructor(private route: ActivatedRoute, private heroeService: HeroeService) {
     this.id = this.route.snapshot.paramMap.get('id')!;
@@ -33,6 +36,7 @@ export class ProfileComponent {
   ngOnInit() {
     this.getLoggedHero();
     this.getHeroProfile();
+    this.checkIfRatedBefore();
   }
 
   getLoggedHero() {
@@ -46,13 +50,14 @@ export class ProfileComponent {
   getHeroProfile() {
     this.heroeService.getHeroProfile(this.id).subscribe(
       (hero) => {
+        this.heroProfileData = hero;
         this.username = hero?.username;
         this.email = hero?.email;
         this.power = hero?.power;
         this.totalRates = hero?.myRates?.length;
         this.role = hero?.role;
         if (hero?.myRates?.length) {
-          let sum = hero?.myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+          let sum = hero?.myRates.reduce((acc: number, curr: number) => acc + curr, 0);
           this.rate = sum / hero?.myRates?.length;
         } else {
           this.rate = hero?.myRates?.length;
@@ -60,6 +65,25 @@ export class ProfileComponent {
       },
       (error) => {
         console.error('Error fetching user', error);
+      }
+    );
+  }
+
+  checkIfRatedBefore() {
+    this.ratedBefore = !!this.loggedHero?.heroesIRated.includes(this.id);
+  }
+
+  rateHero() {
+    this.loggedHero?.heroesIRated.push(this.id);
+    this.heroeService.updateHero(this.loggedHero?.id, this.loggedHero).subscribe(
+      (res) => {
+        this.heroProfileData?.myRates.push(this.rate);
+        this.heroeService.updateHero(this.id, this.heroProfileData).subscribe(
+          (updatedHero) => {
+            this.ratedBefore = true;
+            localStorage.setItem('heroData', JSON.stringify(this.loggedHero));
+          }
+        );
       }
     );
   }

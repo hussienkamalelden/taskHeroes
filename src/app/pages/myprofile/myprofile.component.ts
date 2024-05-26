@@ -31,7 +31,7 @@ export class MyProfileComponent {
       this.totalRates = parsedData?.myRates?.length;
       this.role = parsedData?.role;
       if (parsedData?.myRates?.length) {
-        let sum = parsedData?.myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+        let sum = parsedData?.myRates.reduce((accu: number, curr: number) => accu + curr, 0);
         this.rate = sum / parsedData?.myRates?.length;
       } else {
         this.rate = parsedData?.myRates?.length;

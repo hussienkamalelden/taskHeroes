@@ -16,7 +16,9 @@
       "password": "123123123",
       "power": "HTML, CSS and Angular",
       "myRates": [],
-      "heroesIRated": [],
+      "heroesIRated": [
+        "458e"
+      ],
       "role": "hero"
     },
     {
@@ -26,7 +28,9 @@
       "password": "Pa$$w0rd!",
       "power": "Nisi duis ipsum alia",
       "token": true,
-      "myRates": [],
+      "myRates": [
+        5
+      ],
       "heroesIRated": [],
       "role": "hero"
     },

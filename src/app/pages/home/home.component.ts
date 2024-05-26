@@ -51,7 +51,7 @@ export class HomeComponent {
 
   calcRates(myRates: number[]) {
     if (myRates?.length) {
-      let sum = myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+      let sum = myRates.reduce((acc: number, curr: number) => acc + curr, 0);
       return sum / myRates?.length;
     } else {
       return myRates?.length;
