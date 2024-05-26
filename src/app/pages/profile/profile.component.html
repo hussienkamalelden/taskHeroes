@@ -6,6 +6,8 @@
                 <img src="../../../assets/images/profile/hero.png" class="rounded-circle" alt="User Image">
                 <h2 class="mt-3">{{ username }}</h2>
                 <p>{{ email }}</p>
+                <p-rating class="prevent-click" [(ngModel)]="oldRate" [readonly]="true" [cancel]="false" />
+                <span class="total-rates">({{ totalRates}} ratings)</span>
             </div>
             <div class="profile-details">
                 <div class="row mb-2">
@@ -13,20 +15,15 @@
                     <div class="col-sm-8">{{ power }}</div>
                 </div>
                 <div class="row mb-2">
-                    <div class="col-sm-4"><strong>Rate:</strong></div>
+                    <div class="col-sm-4"><strong>Rate {{ username }}:</strong></div>
                     <div class="col-sm-8">
                         <td>
-                            <p-rating [(ngModel)]="rate" [readonly]="preventRating||ratedBefore" [cancel]="false"
-                                (click)="rateHero()" />
+                            <ng-container *ngIf="(!preventRating)&&(!ratedBefore)">
+                                <p-rating [(ngModel)]="newRate" [cancel]="false" (click)="rateHero()" />
+                            </ng-container>
                             <span *ngIf="preventRating" class="warning">( You can't rate yourself )</span>
                             <span *ngIf="ratedBefore" class="warning">( You've already rated {{ username }} )</span>
                         </td>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-sm-4"><strong>Total Rates:</strong></div>
-                    <div class="col-sm-8">
-                        {{ totalRates }}
                     </div>
                 </div>
             </div>

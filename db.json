@@ -6,6 +6,7 @@
       "username": "admin",
       "email": "admin@heroes.com",
       "password": "admin0",
+      "heroesIRated": [],
       "role": "admin"
     },
     {
@@ -16,9 +17,7 @@
       "password": "123123123",
       "power": "HTML, CSS and Angular",
       "myRates": [],
-      "heroesIRated": [
-        "458e"
-      ],
+      "heroesIRated": [],
       "role": "hero"
     },
     {
@@ -28,9 +27,7 @@
       "password": "Pa$$w0rd!",
       "power": "Nisi duis ipsum alia",
       "token": true,
-      "myRates": [
-        5
-      ],
+      "myRates": [],
       "heroesIRated": [],
       "role": "hero"
     },
@@ -51,6 +48,28 @@
       "email": "kiguc@mailinator.com",
       "password": "Pa$$w0rd!",
       "power": "Anim voluptatum sint",
+      "token": true,
+      "myRates": [],
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "5508",
+      "username": "shosho",
+      "email": "shosho@gmail.com",
+      "password": "123456",
+      "power": "my eyes",
+      "token": true,
+      "myRates": [],
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "b4c3",
+      "username": "cemafe",
+      "email": "vapoj@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Nemo voluptas sunt q",
       "token": true,
       "myRates": [],
       "heroesIRated": [],

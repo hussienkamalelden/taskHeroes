@@ -21,7 +21,8 @@ export class ProfileComponent {
   email: string = "";
   power: string = "";
   role: string = "";
-  rate: number = 0;
+  oldRate: number = 0;
+  newRate: number = 0;
   totalRates: number = 0;
   loggedHero: Hero | null = null;
   heroProfileData: Hero | null = null;
@@ -58,9 +59,9 @@ export class ProfileComponent {
         this.role = hero?.role;
         if (hero?.myRates?.length) {
           let sum = hero?.myRates.reduce((acc: number, curr: number) => acc + curr, 0);
-          this.rate = sum / hero?.myRates?.length;
+          this.oldRate = sum / hero?.myRates?.length;
         } else {
-          this.rate = hero?.myRates?.length;
+          this.oldRate = hero?.myRates?.length;
         }
       },
       (error) => {
@@ -70,17 +71,22 @@ export class ProfileComponent {
   }
 
   checkIfRatedBefore() {
-    this.ratedBefore = !!this.loggedHero?.heroesIRated.includes(this.id);
+    this.ratedBefore = !!this.loggedHero?.heroesIRated?.includes(this.id);
   }
 
   rateHero() {
     this.loggedHero?.heroesIRated.push(this.id);
     this.heroeService.updateHero(this.loggedHero?.id, this.loggedHero).subscribe(
       (res) => {
-        this.heroProfileData?.myRates.push(this.rate);
+        this.heroProfileData?.myRates.push(this.newRate);
         this.heroeService.updateHero(this.id, this.heroProfileData).subscribe(
           (updatedHero) => {
             this.ratedBefore = true;
+            this.totalRates++;
+            if (this.heroProfileData?.myRates?.length) {
+              let sum = this.heroProfileData?.myRates.reduce((acc: number, curr: number) => acc + curr, 0);
+              this.oldRate = sum / this.heroProfileData?.myRates?.length;
+            }
             localStorage.setItem('heroData', JSON.stringify(this.loggedHero));
           }
         );

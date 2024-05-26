@@ -19,7 +19,7 @@
                 <div *ngIf="role!=='admin'" class="row mb-2">
                     <div class="col-sm-4"><strong>Rate:</strong></div>
                     <div class="col-sm-8">
-                        <td>
+                        <td class="prevent-click">
                             <p-rating [(ngModel)]="rate" [readonly]="true" [cancel]="false" />
                         </td>
                     </div>

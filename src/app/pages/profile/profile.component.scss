@@ -9,12 +9,12 @@
 .profile-header {
     border-bottom: 1px solid #dee2e6;
     padding-bottom: 20px;
-}
-
-.profile-header {
     img {
         width: 150px;
         height: 150px;
+    }
+    .total-rates {
+        display: block;
     }
 }
 
@@ -26,6 +26,5 @@
     .warning {
         color: $dark-green;
         text-transform: none;
-        margin-inline-start: 1rem;
     }
 }

@@ -86,11 +86,11 @@ export class RegisterFormComponent {
         if (!this.isDialog) {
           setTimeout(() => {
             this.router.navigate(['/login']);
-          }, 3000);
+          }, 1500);
         } else {
           setTimeout(() => {
             this.closeDialog.emit();
-          }, 2000);
+          }, 1500);
         }
       },
       (error) => {

@@ -17,7 +17,8 @@
                 <tr>
                     <td><a [routerLink]="['/profile', hero.id]">{{ hero.username }}</a></td>
                     <td>{{ hero.power||'-' }}</td>
-                    <td> <p-rating [(ngModel)]="hero.myRates" [readonly]="true" [cancel]="false" /></td>
+                    <td class="prevent-click"> <p-rating [(ngModel)]="hero.myRates" [readonly]="true"
+                            [cancel]="false" /></td>
                 </tr>
             </ng-template>
         </p-table>
