@@ -1,24 +1,84 @@
 {
-    "allHeroes": [
-        {
-            "id": "0",
-            "token": true,
-            "username": "admin",
-            "email": "admin@heroes.com",
-            "password": "admin0",
-            "role": "admin"
-        },
-        {
-            "id": "1",
-            "token": true,
-            "username": "John Doe",
-            "email": "john@gmail.com",
-            "password": "123123123",
-            "power": "HTML, CSS and Angular",
-            "myRate": 0,
-            "totalRates": 0,
-            "heroesIRated": [],
-            "role": "hero"
-        }
-    ]
+  "allHeroes": [
+    {
+      "id": "0",
+      "token": true,
+      "username": "admin",
+      "email": "admin@heroes.com",
+      "password": "admin0",
+      "role": "admin"
+    },
+    {
+      "id": "1",
+      "token": true,
+      "username": "John Doe",
+      "email": "john@gmail.com",
+      "password": "123123123",
+      "power": "HTML, CSS and Angular",
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "dfa5",
+      "username": "wiwypir",
+      "email": "linyku@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Non nobis saepe qui ",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "08fd",
+      "username": "lykaqopy",
+      "email": "dedula@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Perferendis ullamco ",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "8bae",
+      "username": "hinihu",
+      "email": "jonasaky@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Debitis quia vel exe",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "11cc",
+      "username": "vivoqyfu",
+      "email": "rexy@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Illo quia ut iure et",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "f78c",
+      "username": "sagoqiw",
+      "email": "pakaxys@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Laboris quis nihil d",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    }
+  ]
 }

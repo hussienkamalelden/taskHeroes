@@ -88,7 +88,9 @@ export class RegisterFormComponent {
             this.router.navigate(['/login']);
           }, 3000);
         } else {
-          this.closeDialog.emit();
+          setTimeout(() => {
+            this.closeDialog.emit();
+          }, 2000);
         }
       },
       (error) => {

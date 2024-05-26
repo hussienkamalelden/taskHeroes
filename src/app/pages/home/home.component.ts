@@ -33,8 +33,6 @@ export class HomeComponent {
     if (heroData) {
       const parsedData = JSON.parse(heroData);
       this.userRole = parsedData?.role;
-      console.log(this.userRole);
-
     }
   }
 
@@ -48,9 +46,10 @@ export class HomeComponent {
   onSearch(): void {
     if (this.searchTerm) {
       this.filteredHeroes = this.heroes.filter(hero =>
-        hero.name.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-        hero.power.toString().includes(this.searchTerm) ||
-        hero.myRate.toString().includes(this.searchTerm)
+      (console.log(hero),
+
+        hero?.username?.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        hero?.power?.toLowerCase().includes(this.searchTerm.toLowerCase()))
       );
     } else {
       this.filteredHeroes = this.heroes;

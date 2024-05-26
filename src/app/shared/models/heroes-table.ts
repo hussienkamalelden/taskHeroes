@@ -1,6 +1,6 @@
 export interface HeroesTable {
     id: number;
-    name: string;
-    power: number;
+    username: string;
+    power: string;
     myRate: number;
 }
