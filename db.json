@@ -1,24 +1,36 @@
 {
-    "allHeroes": [
-        {
-            "id": "0",
-            "token": true,
-            "username": "admin",
-            "email": "admin@heroes.com",
-            "password": "admin0",
-            "role": "admin"
-        },
-        {
-            "id": "1",
-            "token": true,
-            "username": "John Doe",
-            "email": "john@gmail.com",
-            "password": "123123123",
-            "power": "HTML, CSS and Angular",
-            "myRate": 0,
-            "totalRates": 0,
-            "heroesIRated": [],
-            "role": "hero"
-        }
-    ]
+  "allHeroes": [
+    {
+      "id": "0",
+      "token": true,
+      "username": "admin",
+      "email": "admin@heroes.com",
+      "password": "admin0",
+      "role": "admin"
+    },
+    {
+      "id": "1",
+      "token": true,
+      "username": "John Doe",
+      "email": "john@gmail.com",
+      "password": "123123123",
+      "power": "HTML, CSS and Angular",
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "2186",
+      "username": "qetezidex",
+      "email": "luruvazo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Exercitation qui ali",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    }
+  ]
 }

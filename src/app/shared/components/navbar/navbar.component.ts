@@ -9,9 +9,15 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  userName: String = "username"
+  userName: string = "username";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    const heroData = localStorage.getItem("heroData");
+    if (heroData) {
+      const parsedData = JSON.parse(heroData);
+      this.userName = parsedData.username;
+    }
+  }
 
   logout(): void {
     localStorage.removeItem("heroData");

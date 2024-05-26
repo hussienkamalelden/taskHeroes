@@ -9,13 +9,14 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { AddHeroDialogComponent } from './add-hero-dialog/add-hero-dialog.component';
 import { Router, RouterModule } from '@angular/router';
+import { NavbarComponent } from '../../shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  imports: [CommonModule, TableModule, InputTextModule, FormsModule, RatingModule, ButtonModule, AddHeroDialogComponent, RouterModule]
+  imports: [CommonModule, TableModule, InputTextModule, FormsModule, RatingModule, ButtonModule, AddHeroDialogComponent, RouterModule, NavbarComponent]
 })
 export class HomeComponent {
   visible: boolean = false;
