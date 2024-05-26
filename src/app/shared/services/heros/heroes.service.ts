@@ -29,4 +29,11 @@ export class HeroeService {
       })
     );
   }
+
+  getHeroProfile(id: string): Observable<any> {
+    return this.http.get<any[]>(`${this.apiUrl}?id=${id}`)
+      .pipe(
+        map(users => users.length ? users[0] : null)
+      );
+  }
 }

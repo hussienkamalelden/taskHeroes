@@ -21,11 +21,23 @@
       "role": "hero"
     },
     {
-      "id": "c9fd",
-      "username": "gikip",
-      "email": "jemoqoxo@mailinator.com",
+      "id": "00bb",
+      "username": "lesyk",
+      "email": "celykeqix@mailinator.com",
       "password": "Pa$$w0rd!",
-      "power": "Velit labore ut esse",
+      "power": "Accusantium est odit",
+      "token": true,
+      "myRate": 0,
+      "totalRates": 0,
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "9109",
+      "username": "jelehok",
+      "email": "baminapo@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Et Nam cillum offici",
       "token": true,
       "myRate": 0,
       "totalRates": 0,
