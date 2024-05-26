@@ -43,7 +43,7 @@ export class LoginComponent {
   }
 
   onLogin(email: string, password: string) {
-    this.heroeService.login(email, password).subscribe(
+    this.heroeService.login(email.toLowerCase(), password).subscribe(
       hero => {
         if (hero) {
           localStorage.setItem('heroData', JSON.stringify(hero));
