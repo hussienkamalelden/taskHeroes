@@ -58,10 +58,10 @@ export class HomeComponent {
 
   showDialog() {
     this.visible = true;
-    this.getAllHeroes();
   }
 
   receiveDialogData(event: String) {
     this.visible = false;
+    this.getAllHeroes();
   }
 }
