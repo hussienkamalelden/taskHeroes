@@ -19,18 +19,6 @@
             "totalRates": 0,
             "heroesIRated": [],
             "role": "hero"
-        },
-        {
-            "id": "bc56",
-            "username": "tuvewav",
-            "email": "a@a.com",
-            "password": "a@a.com",
-            "power": "Nisi iure laborum Q",
-            "token": true,
-            "myRate": 0,
-            "totalRates": 0,
-            "heroesIRated": [],
-            "role": "hero"
         }
     ]
 }

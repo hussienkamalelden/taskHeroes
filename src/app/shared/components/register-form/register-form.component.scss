@@ -1,0 +1,81 @@
+@import "../../../../assets/scss/abstracts/functions";
+@import "../../../../assets/scss/abstracts/variables";
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: toRem(16);
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    h2 {
+        text-align: center;
+        margin-bottom: toRem(16);
+    }
+
+    div {
+        margin-bottom: toRem(8);
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid $input-border-color;
+            border-radius: 3px;
+            transition: border-color 0.3s;
+
+            &:focus {
+                border-color: $input-border-focus-color;
+                outline: none;
+            }
+
+            &.ng-invalid.ng-touched {
+                border-color: $error-color;
+            }
+        }
+
+        .error-message {
+            color: $error-color;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: toRem(16);
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: toRem(16);
+        font-size: 14px;
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}

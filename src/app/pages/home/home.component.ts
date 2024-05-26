@@ -28,10 +28,7 @@ export class HomeComponent {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.heroeService.getHeroes().subscribe(data => {
-      this.heroes = data.filter(hero => hero.role !== "admin");
-      this.filteredHeroes = this.heroes;
-    });
+    this.getAllHeroes();
     const heroData = localStorage.getItem("heroData");
     if (heroData) {
       const parsedData = JSON.parse(heroData);
@@ -39,6 +36,13 @@ export class HomeComponent {
       console.log(this.userRole);
 
     }
+  }
+
+  getAllHeroes() {
+    this.heroeService.getHeroes().subscribe(data => {
+      this.heroes = data.filter(hero => hero.role !== "admin");
+      this.filteredHeroes = this.heroes;
+    });
   }
 
   onSearch(): void {
@@ -55,6 +59,7 @@ export class HomeComponent {
 
   showDialog() {
     this.visible = true;
+    this.getAllHeroes();
   }
 
   receiveDialogData(event: String) {
