@@ -39,9 +39,23 @@ export class HomeComponent {
 
   getAllHeroes() {
     this.heroeService.getHeroes().subscribe(data => {
-      this.heroes = data.filter(hero => hero.role !== "admin");
+      this.heroes = data.map(hero => {
+        if (hero.role !== "admin") {
+          return { ...hero, myRates: this.calcRates(hero.myRates) }
+        }
+      }
+      );
       this.filteredHeroes = this.heroes;
     });
+  }
+
+  calcRates(myRates: number[]) {
+    if (myRates?.length) {
+      let sum = myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+      return sum / myRates?.length;
+    } else {
+      return myRates?.length;
+    }
   }
 
   onSearch(): void {

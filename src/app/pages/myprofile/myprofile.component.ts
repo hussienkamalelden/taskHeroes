@@ -28,9 +28,14 @@ export class MyProfileComponent {
       this.username = parsedData?.username;
       this.email = parsedData?.email;
       this.power = parsedData?.power;
-      this.rate = parsedData?.rate;
-      this.totalRates = parsedData?.totalRates;
+      this.totalRates = parsedData?.myRates?.length;
       this.role = parsedData?.role;
+      if (parsedData?.myRates?.length) {
+        let sum = parsedData?.myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+        this.rate = sum / parsedData?.myRates?.length;
+      } else {
+        this.rate = parsedData?.myRates?.length;
+      }
     }
   }
 

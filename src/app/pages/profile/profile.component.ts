@@ -49,9 +49,14 @@ export class ProfileComponent {
         this.username = hero?.username;
         this.email = hero?.email;
         this.power = hero?.power;
-        this.rate = hero?.rate;
-        this.totalRates = hero?.totalRates;
+        this.totalRates = hero?.myRates?.length;
         this.role = hero?.role;
+        if (hero?.myRates?.length) {
+          let sum = hero?.myRates.reduce((accumulator: number, currentValue: number) => accumulator + currentValue, 0);
+          this.rate = sum / hero?.myRates?.length;
+        } else {
+          this.rate = hero?.myRates?.length;
+        }
       },
       (error) => {
         console.error('Error fetching user', error);

@@ -74,8 +74,7 @@ export class RegisterFormComponent {
       ...this.registrationForm.value,
       email: this.registrationForm.value.email.toLowerCase(),
       token: true,
-      myRate: 0,
-      totalRates: 0,
+      myRates: [],
       heroesIRated: [],
       role: "hero"
     }

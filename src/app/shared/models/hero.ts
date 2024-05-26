@@ -4,8 +4,7 @@ export interface Hero {
     name: string;
     email: string;
     power: string;
-    myRate: number;
-    totalRates: number;
-    heroesIRated: number[];
+    myRates: number[];
+    heroesIRated: string[];
     role: string;
 }
