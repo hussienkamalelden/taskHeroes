@@ -16,13 +16,16 @@
                     <div class="col-sm-4"><strong>Rate:</strong></div>
                     <div class="col-sm-8">
                         <td>
-                            <p-rating [(ngModel)]="rate" [readonly]="true" [cancel]="false" />
+                            <p-rating [(ngModel)]="rate" [readonly]="preventRating" [cancel]="false" />
+                            <span *ngIf="preventRating" class="warning">( You can't rate yourself )</span>
                         </td>
                     </div>
                 </div>
                 <div class="row mb-2">
                     <div class="col-sm-4"><strong>Total Rates:</strong></div>
-                    <div class="col-sm-8">{{ totalRates }}</div>
+                    <div class="col-sm-8">
+                        {{ totalRates }}
+                    </div>
                 </div>
             </div>
         </div>

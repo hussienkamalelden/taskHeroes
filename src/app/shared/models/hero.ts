@@ -1,5 +1,5 @@
 export interface Hero {
-    id: number;
+    id: string;
     token: string;
     name: string;
     email: string;

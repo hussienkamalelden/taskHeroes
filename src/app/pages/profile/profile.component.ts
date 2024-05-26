@@ -24,6 +24,7 @@ export class ProfileComponent {
   rate: number = 0;
   totalRates: number = 0;
   loggedHero: Hero | null = null;
+  preventRating: boolean = false;
 
   constructor(private route: ActivatedRoute, private heroeService: HeroeService) {
     this.id = this.route.snapshot.paramMap.get('id')!;
@@ -38,6 +39,7 @@ export class ProfileComponent {
     const heroData = localStorage.getItem("heroData");
     if (heroData) {
       this.loggedHero = JSON.parse(heroData);
+      this.preventRating = this.loggedHero?.id == this.id ? true : false;
     }
   }
 
