@@ -1,120 +1,24 @@
 {
-  "allHeroes": [
-    {
-      "id": "0",
-      "token": true,
-      "username": "admin",
-      "email": "admin@heroes.com",
-      "password": "admin0",
-      "role": "admin"
-    },
-    {
-      "id": "1",
-      "token": true,
-      "username": "John Doe",
-      "email": "john@gmail.com",
-      "password": "123123123",
-      "power": "HTML, CSS and Angular",
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "f3cc",
-      "username": "sezivywyzu",
-      "email": "wane@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Ut mollitia eaque vo",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "807a",
-      "username": "wybumohuhu",
-      "email": "wemax@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Aute maiores ea exce",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "fcc8",
-      "username": "girukyjumo",
-      "email": "dihisone@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Inventore sit sed o",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "be8e",
-      "username": "musuj",
-      "email": "mosyro@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Distinctio Voluptat",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "2ef9",
-      "username": "wylikul",
-      "email": "kakubyd@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Fuga Iste amet ips",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "cf5d",
-      "username": "kyfahufez",
-      "email": "faxe@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Illo dolor asperiore",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "b021",
-      "username": "pexexevo",
-      "email": "saxalav@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Occaecat commodo vol",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    },
-    {
-      "id": "166d",
-      "username": "womyduqic",
-      "email": "mipobycef@mailinator.com",
-      "password": "Pa$$w0rd!",
-      "power": "Minus cumque iure co",
-      "token": true,
-      "myRate": 0,
-      "totalRates": 0,
-      "heroesIRated": [],
-      "role": "hero"
-    }
-  ]
+    "allHeroes": [
+        {
+            "id": "0",
+            "token": true,
+            "username": "admin",
+            "email": "admin@heroes.com",
+            "password": "admin0",
+            "role": "admin"
+        },
+        {
+            "id": "1",
+            "token": true,
+            "username": "John Doe",
+            "email": "john@gmail.com",
+            "password": "123123123",
+            "power": "HTML, CSS and Angular",
+            "myRate": 0,
+            "totalRates": 0,
+            "heroesIRated": [],
+            "role": "hero"
+        }
+    ]
 }
