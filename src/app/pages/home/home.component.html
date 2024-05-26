@@ -1,27 +1,29 @@
 <app-navbar />
-<div class="container mt-3">
-    <p-button *ngIf="userRole=='admin'" (click)="showDialog()" label="Add New Hero" />
-    <div class="p-fluid mt-3">
-        <div class="p-field">
-            <input type="text" pInputText placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()">
+<div class="home-container">
+    <div class="container">
+        <p-button class="add-new-hero" *ngIf="userRole=='admin'" (click)="showDialog()" label="Add New Hero" />
+        <div class="p-fluid mt-3">
+            <div class="p-field">
+                <input type="text" pInputText placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()">
+            </div>
+            <p-table [value]="filteredHeroes" [paginator]="true" [rows]="10" sortMode="multiple">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="username">Hero Name <p-sortIcon field="username"></p-sortIcon></th>
+                        <th pSortableColumn="power">Powers <p-sortIcon field="power"></p-sortIcon></th>
+                        <th>Rate</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-hero>
+                    <tr>
+                        <td><a [routerLink]="['/profile', hero.id]">{{ hero.username }}</a></td>
+                        <td>{{ hero.power||'-' }}</td>
+                        <td class="prevent-click"> <p-rating [(ngModel)]="hero.myRates" [readonly]="true"
+                                [cancel]="false" /></td>
+                    </tr>
+                </ng-template>
+            </p-table>
         </div>
-        <p-table [value]="filteredHeroes" [paginator]="true" [rows]="10" sortMode="multiple">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th pSortableColumn="name">Hero Name <p-sortIcon field="name"></p-sortIcon></th>
-                    <th pSortableColumn="power">Powers <p-sortIcon field="power"></p-sortIcon></th>
-                    <th>Rate</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-hero>
-                <tr>
-                    <td><a [routerLink]="['/profile', hero.id]">{{ hero.username }}</a></td>
-                    <td>{{ hero.power||'-' }}</td>
-                    <td class="prevent-click"> <p-rating [(ngModel)]="hero.myRates" [readonly]="true"
-                            [cancel]="false" /></td>
-                </tr>
-            </ng-template>
-        </p-table>
+        <app-add-hero-dialog (dataEmitter)="receiveDialogData($event)" [visible]="visible" />
     </div>
-    <app-add-hero-dialog (dataEmitter)="receiveDialogData($event)" [visible]="visible" />
 </div>

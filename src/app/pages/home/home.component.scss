@@ -1,61 +1,76 @@
 @import "../../../assets/scss/abstracts/functions";
 @import "../../../assets/scss/abstracts/variables";
 
-.p-fluid {
-    padding: 1rem * 2;
-    background-color: #fff;
-    border: 1px solid $border-color;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.p-field {
-    margin-bottom: 1rem * 2;
-    input[pInputText] {
-        width: 100%;
-        padding: 1rem;
-        border: 1px solid $border-color;
-        border-radius: 5px;
-        &:focus {
-            border-color: $primary-color;
-            box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
-        }
-    }
-}
-
-p-table {
-    margin-top: 1rem * 2;
-    th {
-        background-color: $secondary-color;
-        color: #fff;
-        padding: 1rem;
-        &.p-sortable-column {
-            cursor: pointer;
-        }
-    }
-    td {
-        padding: 1rem;
-        a {
-            color: $primary-color;
-            text-decoration: none;
-            &:hover {
-                text-decoration: underline;
+.home-container {
+    ::ng-deep {
+        .add-new-hero {
+            display: flex;
+            justify-content: flex-end;
+            .p-element.p-button.p-component {
+                background-color: $primary-color;
+                .p-button-label {
+                    font-weight: bold;
+                }
             }
         }
     }
-}
 
-p-rating {
-    .p-rating-icon {
-        color: $primary-color;
-    }
-}
-@media (max-width: 768px) {
     .p-fluid {
-        padding: 1rem;
+        padding: 2rem;
+        background-color: #fff;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    th,
-    td {
-        padding: 1rem / 2;
+
+    .p-field {
+        margin-bottom: 2rem;
+        input[pInputText] {
+            width: 30%;
+            padding: 0.5rem 1rem;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+            }
+        }
+    }
+
+    p-table {
+        margin-top: 1rem * 2;
+        th {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            &.p-sortable-column {
+                cursor: pointer;
+            }
+        }
+        td {
+            padding: 1rem;
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                font-weight: bold;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p-rating {
+        .p-rating-icon {
+            color: $primary-color;
+        }
+    }
+    @media (max-width: 768px) {
+        .p-fluid {
+            padding: 1rem;
+        }
+        th,
+        td {
+            padding: 1rem / 2;
+        }
     }
 }
