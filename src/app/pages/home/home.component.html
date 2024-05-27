@@ -1,7 +1,9 @@
 <app-navbar />
 <div class="home-container">
     <div class="container">
-        <p-button class="add-new-hero" *ngIf="userRole=='admin'" (click)="showDialog()" label="Add New Hero" />
+        <div class="add-new-hero">
+            <p-button *ngIf="userRole=='admin'" (click)="showDialog()" label="Add New Hero" />
+        </div>
         <div class="p-fluid mt-3">
             <div class="p-field">
                 <input type="text" pInputText placeholder="Search" [(ngModel)]="searchTerm" (input)="onSearch()">
