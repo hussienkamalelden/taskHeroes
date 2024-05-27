@@ -30,6 +30,28 @@
       "myRates": [],
       "heroesIRated": [],
       "role": "hero"
+    },
+    {
+      "id": "4c91",
+      "username": "sasyqyxe",
+      "email": "hexer@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Expedita distinctio",
+      "token": true,
+      "myRates": [],
+      "heroesIRated": [],
+      "role": "hero"
+    },
+    {
+      "id": "ae95",
+      "username": "hyjugahixa",
+      "email": "xazyryqyk@mailinator.com",
+      "password": "Pa$$w0rd!",
+      "power": "Qui qui ipsum qui l",
+      "token": true,
+      "myRates": [],
+      "heroesIRated": [],
+      "role": "hero"
     }
   ]
 }
