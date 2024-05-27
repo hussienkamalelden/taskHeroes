@@ -6,7 +6,9 @@
       "username": "admin",
       "email": "admin@heroes.com",
       "password": "admin0",
-      "heroesIRated": [],
+      "heroesIRated": [
+        "4c91"
+      ],
       "role": "admin"
     },
     {
@@ -38,7 +40,9 @@
       "password": "Pa$$w0rd!",
       "power": "Expedita distinctio",
       "token": true,
-      "myRates": [],
+      "myRates": [
+        4
+      ],
       "heroesIRated": [],
       "role": "hero"
     },
