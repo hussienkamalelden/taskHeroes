@@ -1,1 +1,40 @@
-<p>login works!</p>
+<p-toast></p-toast>
+
+<div class="login-container">
+    <div class="left-side">
+        <div class="logo-container">
+            <div class="box">
+                <img class="main-logo" src="../../../assets/images/navbar/main_logo.png" alt="logo">
+                <div>
+                    <h2 class="logo-title">Heroes</h2>
+                    <span class="slogan">Where Everyday <span class="highlight">Legends</span> Come to Life</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-box">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-container">
+            <h2>Login</h2>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" formControlName="email" type="email" />
+                <div *ngIf="submitted && f['email'].errors" class="error-message">
+                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                    <div *ngIf="f['email'].errors['email']">Email is invalid</div>
+                </div>
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input id="password" formControlName="password" type="password" />
+                <div *ngIf="submitted && f['password'].errors" class="error-message">
+                    <div *ngIf="f['password'].errors['required']">Password is required</div>
+                    <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters</div>
+                </div>
+            </div>
+
+            <button type="submit">Login</button>
+            <p class="register-link">Don't have an account? <a routerLink="/register">Register</a></p>
+        </form>
+    </div>
+</div>

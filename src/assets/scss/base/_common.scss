@@ -1,0 +1,15 @@
+@import "/src/assets/scss/abstracts/functions";
+@import "/src/assets/scss/abstracts/variables";
+p {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.dropdown {
+  .btn,.show {
+    border-color: transparent;
+  }
+}

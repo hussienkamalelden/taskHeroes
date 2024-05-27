@@ -1,0 +1,28 @@
+@import "../../../../assets/scss/abstracts/variables";
+
+.navbar-container {
+    background-color: $primary-color;
+    margin-bottom: 2rem;
+    .navbar-brand {
+        color: $white;
+        font-weight: bold;
+        img {
+            width: 35px;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $white;
+            .username {
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+        }
+        .dropdown-item:focus,
+        .dropdown-item:hover {
+            background-color: $primary-color;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
