@@ -1,4 +1,4 @@
-# Heros
+# Heroes
 
 ![flow](https://github.com/hussienkamalelden/taskHeroes/assets/51526094/9cd8dc3a-7414-4c04-8508-bfc3f807c536)
 
