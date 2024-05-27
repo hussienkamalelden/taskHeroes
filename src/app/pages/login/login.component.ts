@@ -32,7 +32,6 @@ export class LoginComponent {
     });
   }
 
-  // Submit form and show validation errors
   onSubmit() {
     this.submitted = true;
     if (this.loginForm.invalid) {
